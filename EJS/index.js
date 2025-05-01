@@ -24,7 +24,11 @@ app.get("/dic", (req, res) => {
 // passusername
 app.get("/ig/:username", (req,res) => {
     const followers = ["sakib","rokib","tushar","sunny"]
+    let { object } = req.params;
+    console.log(object);
+    
     let { username } = req.params;
+    
     res.render("instragram.ejs", { username, followers })
      
 })
